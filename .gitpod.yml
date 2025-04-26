@@ -6,8 +6,7 @@ tasks:
     env: 
       AWS_CLI_AUTO_PROMPT=on-partial
     before: |
-      sudo apt update
-      sudo apt install unzip curl -y
+      cd /workspace
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
       rm -rf aws
       unzip awscliv2.zip

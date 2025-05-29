@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+echo "== deploy rds"
+
+$STACK_NAME = "rds-DMS-mysql"
+
+aws cloudformation deploy `
+  --template-file cfn/mysql.yaml `
+  --stack-name $STACK_NAME `
+  --capabilities CAPABILITY_NAMED_IAM `
+  --no-execute-changeset `
+  --parameter-overrides `
+    VpcId="vpc-0bb242c35a9aaf206" `
+    Subnets="subnet-0b1066f60bd6d9e07,subnet-096be774bd12b1fb4,subnet-0226964a56bad7fb4" `
+  --region us-east-1

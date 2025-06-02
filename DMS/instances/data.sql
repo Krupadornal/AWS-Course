@@ -8,3 +8,5 @@ INSERT INTO employees (name, department, salary) VALUES
 ('Alice Smith', 'HR', 60000),
 ('Bob Johnson', 'Engineering', 80000),
 ('Carol Evans', 'Finance', 75000);
+
+
